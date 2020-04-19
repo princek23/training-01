@@ -1,0 +1,84 @@
+.HeaderMenu{
+    height: 80px;
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.Background{
+    border-bottom: 1px solid #b6bdbd;
+}
+
+.HeaderMenu img{
+ align-self: center;
+     padding: 6px 0 14px;
+}
+.HeaderMenu ul{
+    display: flex;
+    /* width: 70%; */
+    list-style: none;
+    justify-content: space-between;
+    align-items: center;
+    color: #022737;
+    font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+}
+
+.HeaderMenu li{
+    /* height: 80px; */
+   padding: 35px 15px 23px  ;
+}
+.HeaderMenu li:hover{
+    border-bottom: 6px solid #006778;
+
+}
+  
+.HeaderMenu> div {
+    display: none;
+   
+}
+.HeaderMenu> div > div {
+    
+    width: 32px;
+    border-bottom: 2px solid #022737;
+    margin: 5px;
+}
+@media (max-width:1190px){
+    .HeaderMenu{
+        width: 90%;
+    }
+}
+@media (max-width:768px){
+    .HeaderMenu{
+        width: 90%;
+        overflow: hidden;
+    }
+    .HeaderMenu ul{
+        position: absolute;
+        top:101%;
+        z-index: 11;
+        /* left: -21%; */
+        flex-direction: column;
+        transform: translateX(100%);
+        display: none;
+        width: 0%;
+    }
+    .HeaderMenu ul li{
+        background-color: white;
+        width: 100vw;
+        padding: 0px;
+        border-bottom:1px solid #ddd;
+
+
+    }
+     
+.HeaderMenu> div {
+    
+    display: flex;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: center;
+}
+}
