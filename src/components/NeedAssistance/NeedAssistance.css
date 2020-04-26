@@ -1,0 +1,68 @@
+.NeedAss > h3 {
+    font-family: "Berkeley";
+    font-size: 36px;
+    font-weight: normal;
+    line-height: 1.17;
+    letter-spacing: 0.5px;
+    color: #022737;
+    padding: 50px 367px 15px 50px;
+    margin: 0 !important;
+  }
+  
+  .NeedAss p:first-of-type {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #505050;
+    font-family: "HelveticaNeue";
+    padding: 0px 836px 30px 50px;
+    margin: 0 !important;
+  }
+  
+  .NeedAss p:nth-of-type(2) {
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 1.5;
+    color: #022737;
+    font-family: "HelveticaNeue";
+    padding: 0px 150px 30px 50px;
+    margin: 0;
+  }
+  
+  .NeedAss p:nth-of-type(3) {
+    font-family: "HelveticaNeue";
+    font-size: 16px;
+    line-height: 1.5;
+    color: #505050;
+    padding: 30px 332px 30px 50px;
+    margin: 0;
+  }
+  
+  .NeedAss p:nth-of-type(3) > span {
+    font-family: "HelveticaNeue";
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 1.5;
+    color: #022737;
+  }
+  hr {
+    max-width: 532px;
+    margin-left: 50px;
+  }
+  
+  .NeedAss p:nth-of-type(4) {
+    font-family: "Berkeley";
+    font-size: 24px;
+    line-height: 1.25;
+    letter-spacing: 0.5px;
+    color: #022737;
+    padding: 50px 0 15px 50px;
+  }
+  
+  .NeedAss p:nth-of-type(5) {
+    font-family: "HelveticaNeue";
+    font-size: 16px;
+    line-height: 1.5;
+    color: #505050;
+    padding: 0 0 50px 50px;
+  }
+  

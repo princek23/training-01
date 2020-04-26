@@ -1,0 +1,54 @@
+.formStyle Form label {
+    font-family: "HelveticaNeue";
+    font-size: 16px;
+    line-height: 1.5;
+    color: #505050;
+    padding: 0px 0px 0px 50px;
+  }
+  
+  .formStyle Form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .formStyle Form input[type="text"] {
+    border: solid 1px #d4d4d4;
+    background-color: #ffffff;
+    padding: 8px 164px 8px 20px;
+    margin: 10px 942px 40px 50px;
+  }
+  
+  .formStyle Form input[type="email"] {
+    border: solid 1px #d4d4d4;
+    background-color: #ffffff;
+    padding: 8px 164px 8px 20px;
+    margin: 10px 942px 40px 50px;
+  }
+  
+  .formStyle Form textarea {
+    width: 500px;
+    height: 150px;
+    border: solid 1px #d4d4d4;
+    background-color: #ffffff;
+    padding: 10px 74px 0px 20px;
+    font-size: 16px;
+    line-height: 1;
+    margin-left: 51px;
+    /* margin-top: 10px; */
+    margin: 10px 942px 40px 50px;
+    display: block;
+  }
+  
+  .formStyle Form input[type="submit"] {
+    padding: 15px 80px 14px 80px;
+    margin: 50px 1100px 0 50px;
+    color: white;
+    background-color: #006778;
+    font-size: 18px;
+    font-weight: bold;
+    font-stretch: condensed;
+    letter-spacing: 0.5px;
+    color: #ffffff;
+    font-family: "HelveticaNeue-CondensedBold", "Helvetica Neue";
+  }
+  

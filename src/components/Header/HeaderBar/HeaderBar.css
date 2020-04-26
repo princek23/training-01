@@ -1,0 +1,47 @@
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+  }
+  
+  .header-backgroud {
+    display: flex;
+    background-color: #022737;
+    justify-content: flex-end;
+    max-width: 100%;
+  }
+  
+  .header-backgroud > p > a {
+    color: white;
+    text-decoration: none;
+    font-family: "HelveticaNeue";
+    cursor: pointer;
+  }
+  
+  .header-backgroud p {
+    padding: 13px 40px 13px 0;
+  }
+  
+  .header-backgroud img {
+    padding: 13px 20px 13px 0;
+  }
+  
+  .header-backgroud > select > option {
+      border-radius: 10.5px;
+      color: #022737;
+      font-size: 12px;
+      letter-spacing: 0.5px;
+      font-family: "HelveticaNeue-CondensedBold", "Helvetica Neue";
+      width: 183px;
+    }
+    .header-backgroud > select {
+      border-radius: 10.5px;
+      margin: 15px 20px 0px 10px;
+      width: 246px;
+      height: 21px;
+      font-family: "HelveticaNeue";
+      font-size: 12px;
+      font-weight: bold;
+      letter-spacing: 0.5px;
+    }
+  
