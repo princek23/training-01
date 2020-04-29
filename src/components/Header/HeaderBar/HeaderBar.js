@@ -11,7 +11,7 @@ class Header extends Component {
     return (
         <BrowserRouter>
       <div className="header-backgroud">
-      <p>NeedAssistance</p>
+      <p>Need</p>
        {/*<p>
         <Link to="/NeedAssistance">NeedAssistance</Link>
         <Switch>
