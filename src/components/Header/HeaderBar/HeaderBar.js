@@ -12,7 +12,7 @@ class Header extends Component {
         <BrowserRouter>
       <div className="header-backgroud">
       <p>NeedAssistance</p>
-       { /*<p>
+       {/*<p>
         <Link to="/NeedAssistance">NeedAssistance</Link>
         <Switch>
     <Route path="/NeedAssistance" exact component={NeedAssistance}></Route></Switch>
