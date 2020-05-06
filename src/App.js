@@ -3,21 +3,12 @@ import Header from "./components/Header/Header";
 import AccountDetails from "./components/MainContent/AccountDetails/AccountDetails";
 import AccountOverview from "./components/MainContent/AccountOverview/AccountOverview";
 import "./App.css";
-import {BrowserRouter, Route, Switch} from "react-router-dom";
-import NeedAssistance from "./components/NeedAssistance/NeedAssistance";
+import Routes from "./Routes";
 
 function App() {
   return (
     <React.Fragment>
-      <BrowserRouter>
-        <Switch>
-          <Route
-            path="/NeedAssistance"
-            exact
-            component={NeedAssistance}
-          ></Route>
-        </Switch>
-      </BrowserRouter>
+      <Routes />
       <Header />
       <AccountOverview />
       <AccountDetails />
