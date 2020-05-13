@@ -9,16 +9,16 @@ import {connect} from 'react-redux';
 function App(props) {
   console.log(props)
   return (
+    <React.Fragment>
+      <Header />
+      <Routes />
+    </React.Fragment>
     // <React.Fragment>
     //   <div>
     //   <h1>My name is {props.myname}</h1>
     //   <button onClick={()=>{props.changeName("xyz")}}>Change It</button>
     //   </div>
     // </React.Fragment>
-    <React.Fragment>
-      <Header />
-      <Routes />
-    </React.Fragment>
   );
 }
 

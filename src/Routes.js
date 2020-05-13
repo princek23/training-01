@@ -10,13 +10,11 @@ export default class Routes extends Component {
       <Router history={history}>
         <Switch>
           <Route
-            path="/NeedAssistance" exact 
+            path="/NeedAssistance"
+            exact
             component={NeedAssistance}
           ></Route>
-          <Route
-            path="/" exact 
-            component={Account}
-          ></Route>
+          <Route path="/" exact component={Account}></Route>
         </Switch>
       </Router>
     );
