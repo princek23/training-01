@@ -21,7 +21,7 @@ const tabData = [
       tableValue1: ["31/6/2019", "17/3/2019", "39"],
       tableValue2: ["VBS Security", "$20,000.00", "Entered"],
     },
-    linkBtn: "View Contribution Activity",
+    linkBtn: "VIEW GRANT ACTIVITY",
   },
   {
     GiftId: "Gift ID: 4436109-2",
@@ -32,7 +32,7 @@ const tabData = [
       tableValue1: ["10/4/2019", "10/4/2019", "50"],
       tableValue2: ["VBS Safety", "$50,000.00", "Entered"],
     },
-    linkBtn: "View Contribution Activity",
+    linkBtn: "VIEW CONTRIBUTION ACTIVITY",
   },
   {
     GiftId: "Gift ID: 4436109-3",
@@ -43,7 +43,7 @@ const tabData = [
       tableValue1: ["20/3/2019", "01/12/2019", "45"],
       tableValue2: ["VBS Security", "$120,000.00", "Entered"],
     },
-    linkBtn: "View Contribution Activity",
+    linkBtn: "VIEW EXCHANGE ACTIVITY",
   },
   {
     GiftId: "Gift ID: 4436109-4",
@@ -54,7 +54,7 @@ const tabData = [
       tableValue1: ["24/10/2019", "10/3/2019", "76"],
       tableValue2: ["Divine Secure", "$189,000.00", "Entered"],
     },
-    linkBtn: "View Contribution Activity",
+    linkBtn: "VIEW OTHER TRANSACTIONS ACTIVITY",
   },
 ];
 

@@ -1,19 +1,37 @@
 import React from "react";
 import Header from "./components/Header/Header";
-import AccountDetails from "./components/MainContent/AccountDetails/AccountDetails";
-import AccountOverview from "./components/MainContent/AccountOverview/AccountOverview";
 import "./App.css";
 import Routes from "./Routes";
+import {} from 'redux';
+import {connect} from 'react-redux';
 
-function App() {
+
+function App(props) {
+  console.log(props)
   return (
+    // <React.Fragment>
+    //   <div>
+    //   <h1>My name is {props.myname}</h1>
+    //   <button onClick={()=>{props.changeName("xyz")}}>Change It</button>
+    //   </div>
+    // </React.Fragment>
     <React.Fragment>
-      <Routes />
       <Header />
-      <AccountOverview />
-      <AccountDetails />
+      <Routes />
     </React.Fragment>
   );
 }
 
-export default App;
+const mapStateToProps=(state)=>{
+  return {
+    myname:state.name,
+  }
+}
+
+const mapDispatchToProps=(dispatch)=>{
+  return{
+    changeName:(name)=>{dispatch({type:'CHANGE_NAME',payload:name})}
+  }
+}
+
+export default connect(mapStateToProps,mapDispatchToProps)(App);

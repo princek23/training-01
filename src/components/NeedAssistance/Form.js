@@ -10,6 +10,7 @@ class Form extends Component {
       emailaddress: "",
       query: "",
     };
+    
     this.state=this.initialState; 
 
     this.handlechangevalue=this.handlechangevalue.bind(this);

@@ -4,7 +4,7 @@ import classes from './OtherAccount.module.css';
 import Button from '../../../Button/Button';
 
 
-const buttonData = ['Contribution', 'Grant', 'Exchange', 'Manage your account'];
+const buttonData = ['CONTRIBUTION', 'GRANT', 'EXCHANGE', 'MANAGE YOUR ACCOUNT'];
 const mainMiddle = () => (
     <div className={[classes.MainMiddle, 'MaxWidth'].join(' ')}>
 

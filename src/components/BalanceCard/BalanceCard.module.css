@@ -8,7 +8,7 @@
 }
 
 .BalanceCard p:first-child{
-    color: #022737;
+    color: #505050;
     font-size: 24px;
     line-height: 1.25;
   letter-spacing: 0.5px;
@@ -19,7 +19,7 @@
     
      font-size: 42px;
   font-weight: 300;
-  color:  #69923a;
+  color:  #a8b400;
    padding-bottom: 28px;
 
 }
@@ -29,4 +29,26 @@
   font-weight: bold;
  letter-spacing: 0.5px;
 }
+
+/* .tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltiptext {
+  visibility: visible;
+  position: absolute;
+  visibility: hidden;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  background-color: rgba(0, 103, 120, 0.9);
+  color: white;
+  width: 336.8px;
+  height: 106px;
+  box-shadow: 5px 0 10px 0 rgba(0, 0, 0, 0.1);
+  padding: 20px 0 0 33px;
+  font-size: 14px;
+} */
 

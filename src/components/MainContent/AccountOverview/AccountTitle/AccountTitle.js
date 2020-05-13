@@ -12,19 +12,9 @@ font-family: BerkeleyStd;
     letter-spacing: 0.5px;
     color: #022737;
     margin:0;
-    padding-bottom:15px;
+    padding: 45px 0 0 40px;
 `;
 
-const FundName = style.p`
-font-family: HelveticaNeue;
-    font-size: 16px;
-    font-weight: bold;
-    line-height: 1.5;
-    letter-spacing: normal;
-    color: #022737;
-    margin:0;
-    padding-left:40px;
-    `;
 
 const Balance = style.p`
 font-family: HelveticaNeue;
@@ -33,7 +23,7 @@ font-family: HelveticaNeue;
     letter-spacing: normal;
     color: #505050;
     margin:0;
-    padding-left:40px;
+    padding: 15px 0 0 40px;
 `;
 
 const AccountTitle = (data) => {
@@ -41,7 +31,6 @@ const AccountTitle = (data) => {
   return (
     <AccountTitleTag>
       <Title>Account Overview</Title>
-      <FundName data='The Church Fund - A1050919'></FundName>
       <Balance>Balance as of 12/12/2012</Balance>
     </AccountTitleTag>
   );

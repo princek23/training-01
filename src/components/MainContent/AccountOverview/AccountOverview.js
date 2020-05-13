@@ -6,7 +6,7 @@ import style from "styled-components";
 
 const AccountTag=style.div`
 background:#ffffff;
-    padding:0 140px 50px;
+    padding:0 140px 0px;
     `;
 
 class AccountTitleView extends Component{
@@ -15,7 +15,7 @@ class AccountTitleView extends Component{
             <AccountTag>
             <Breadcrumb path='Home   >   Account overview'/>
             <AccountTitle/>
-            <FundName data='The Church Fund - A1050919'/>
+            <FundName />
             <Breadcrumb/>
             </AccountTag>
         )
