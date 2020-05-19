@@ -1,18 +1,94 @@
-//normal function
-const initialState={
-    name:"abc",
-    wishes:['eat','code']
-}
+// //normal function
+// const initialState={
+//     name:"abc",
+//     wishes:['eat','code']
+// }
 
-const reducer = (state=initialState, action) => {
-    if(action.type==='CHANGE_NAME'){
-        return {
-            ...state,
-            name:action.payload
-        }
+// const reducer = (state=initialState, action) => {
+//     if(action.type==='CHANGE_NAME'){
+//         return {
+//             ...state,
+//             name:action.payload
+//         }
+//     }
+//     console.log(action)
+//     return state;
+// }
+
+// export default reducer;
+
+const initialState = {
+    data: [],
+    fundName: 'The Church Fund - A1050919',
+    whileUpdating: '',
+    index: 0,
+    keyValue: 0,
+};
+
+const reducer = (state = initialState, action) => {
+    switch (action.type) {
+        case 'Change-Name':
+            return {
+                ...state,
+                whileUpdating: action.updatedName
+            };
+        case 'Update-Name':
+            return {
+                ...state,
+                fundName: state.whileUpdating
+            };
+        case 'Cancel-Change':
+            return {
+                ...state,
+                whileUpdating: state.fundName
+            };
+        case 'Get-Data':
+            let getData = localStorage.getItem("DATA");
+            let dataList = [];
+            if (getData) {
+                dataList = JSON.parse(getData);
+            }
+            return {
+                ...state,
+                data: [...dataList],
+                keyValue: dataList.length
+            };
+        case 'Delete-Data':
+            const updateList = [...state.data];
+            const newData = updateList.filter(item => item.key !== action.key);
+            localStorage.setItem("DATA", JSON.stringify(newData));
+
+            return {
+                ...state,
+                data: newData
+            };
+        case 'Update-Data':
+
+            const nwData = [...action.newData];
+            localStorage.setItem("DATA", JSON.stringify(nwData));
+
+            return {
+                ...state,
+                data: nwData
+            };
+        case 'Submit':
+            let newList = [];
+            let data = state.data;
+
+            if (data.length > 0) {
+                newList = data;
+            }
+            newList.push(action.addData);
+            localStorage.setItem("DATA", JSON.stringify(newList));
+            return {
+                ...state,
+                data: newList,
+                keyValue: state.keyValue + 1
+            };
+        default:
+            return state;
     }
-    console.log(action)
-    return state;
-}
+
+};
 
 export default reducer;

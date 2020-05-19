@@ -77,7 +77,7 @@
     margin-left: 0px;
   } */
   
-  .NeedAss button{
+  /* .NeedAss button{
     background-color: #e7e7e7;
     color: black; 
     padding: 5px;
@@ -88,5 +88,135 @@
     border-radius: 50%;
     font-family: "HelveticaNeue";
     margin-left: 0px;
+  } */
+
+  .NeedAss form  label {
+    font-family: "HelveticaNeue";
+    font-size: 16px;
+    line-height: 1.5;
+    color: #505050;
+    padding: 0px 0px 0px 50px;
   }
+  
+  .NeedAss form  {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .NeedAss form  input[type="text"] {
+    border: solid 1px #d4d4d4;
+    background-color: #ffffff;
+    padding: 8px 164px 8px 20px;
+    margin: 10px 942px 40px 50px;
+  }
+  
+  .NeedAss form  input[type="email"] {
+    border: solid 1px #d4d4d4;
+    background-color: #ffffff;
+    padding: 8px 164px 8px 20px;
+    margin: 10px 942px 40px 50px;
+  }
+  
+  .NeedAss form  textarea {
+    width: 500px;
+    height: 150px;
+    border: solid 1px #d4d4d4;
+    background-color: #ffffff;
+    padding: 10px 74px 0px 20px;
+    font-size: 16px;
+    line-height: 1;
+    margin-left: 51px;
+    /* margin-top: 10px; */
+    margin: 10px 942px 40px 50px;
+    display: block;
+  }
+  
+  /* .formStyle input[type="submit"] {
+    padding: 15px 80px 14px 80px;
+    margin: 50px 1100px 0 50px;
+    color: white;
+    background-color: #006778;
+    font-size: 18px;
+    font-weight: bold;
+    font-stretch: condensed;
+    letter-spacing: 0.5px;
+    color: #ffffff;
+    font-family: "HelveticaNeue-CondensedBold", "Helvetica Neue";
+  } */
+
+  .NeedAss form Button{
+  background-color: #006778;
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+    letter-spacing: 0.5px;
+    margin-left: 50px;
+    width: 200px;
+    height: 50px;
+    display: block;
+  }
+
+  .formSubmit{
+padding:50px;
+padding-right:80px;
+  }
+
+  .formSubmit  h2{
+    padding-top: 30px;
+    color: #022737;
+    font-size: 32px;
+}
+
+.formSubmit >div >div{
+  margin-top:50px;
+  border:2px solid #a8b400;
+  border-radius:50%;
+  width:64px;
+  height:64px;
+}
+
+.formSubmit > div > div >div{
+  transform: rotateZ(-45deg);
+  margin: 13px;
+  border:2px solid;
+  border-color:transparent transparent  #a8b400  #a8b400;
+  width:34px;
+  height:20px;
+}
+
+.formSubmit  p{
+  color:#505050;
+  padding-top: 30px;
+}
+
+.formSubmit button{
+  /* background-color: #006778; */
+  font-size: 18px;
+  font-weight: bold;
+  /* color: #fff; */
+  letter-spacing: 0.5px;
+  border:1px solid #006778;
+  margin: 50px 0;
+  width: 200px;
+  height: 50px;
+  display: block;
+  cursor: pointer;
+}
+
+.formSubmit h3{
+  color: #022737;
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+.formSubmit span{
+  color: #505050;
+  display: block;
+  padding-bottom: 20px;
+}
+
+/* @media (max-width:900px) {
+  width:100%;
+   } */
+  
   

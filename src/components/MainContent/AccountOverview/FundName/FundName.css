@@ -1,16 +1,16 @@
 .fundname > span {
-  font-family: "HelveticaNeue";
   font-size: 16px;
   font-weight: bold;
   line-height: 1.5;
   color: #022737;
-  padding: 20px 0 0 40px;
+  /* font-family: "HelveticaNeue"; */
+  /* padding: 20px 0 0 0px; */
 }
 
-.fundname button{
+.fundname button {
   margin-left: 40px;
   background-color: #e7e7e7;
-  color: black; 
+  color: black;
   padding: 5px;
   border: none;
   text-align: center;
@@ -20,6 +20,15 @@
   font-family: "HelveticaNeue";
 }
 
-input[type=text]{
-  margin-left: 40px;
+.fundname > img {
+  margin-left: 10px;
+  height: 20px;
+}
+
+.fundname {
+  display: flex;
+}
+
+.tickmark > img {
+  margin-left: 10px;
 }

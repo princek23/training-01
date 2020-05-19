@@ -1,0 +1,78 @@
+/* .header-backgroud {
+  display: flex;
+  background-color: #022737;
+  justify-content: flex-end;
+  height: 40px;
+}
+
+
+.header-backgroud p {
+  color: white;
+  text-decoration: none;
+  font-family: "HelveticaNeue";
+  cursor: pointer;
+  letter-spacing: 0.5px;
+  padding: 13px 0px 13px 0;
+}
+
+.header-backgroud img:nth-of-type(1) {
+  padding: 13px 20px 13px 0;
+  margin-left: 114px;
+}
+.header-backgroud img:nth-of-type(2) {
+  padding: 13px 20px 13px 0;
+  margin-left: 10px;
+}
+
+.header-backgroud > select > option {
+  border-radius: 10.5px;
+  color: #022737;
+  font-size: 12px;
+  letter-spacing: 0.5px;
+  font-family: "HelveticaNeue-CondensedBold", "Helvetica Neue";
+  width: 183px;
+  padding: 13px 240px 13px 0;
+}
+.header-backgroud > select {
+  border-radius: 10.5px;
+  margin: 11px 0px 0px 116px;
+  width: 246px;
+  height: 20px;
+  font-family: "HelveticaNeue";
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+} */
+
+.headerbarBackgroud{
+  background-color: #022737;
+}
+
+.headerItem{
+  height: 40px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.headerItem ul{
+  list-style: none;
+  width: 50%;
+  display: flex;
+  color: white;
+  justify-content: space-between;
+}
+
+.headerItem ul li{
+   align-self: center;
+}
+
+.headerItem select{
+  border-radius: 10.5px;
+  width: 246px;
+  color: #022737;
+}
+
+.headerItem ul li p{
+  cursor: pointer;
+}

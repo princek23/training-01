@@ -1,34 +1,62 @@
 import React, { Component } from "react";
 import emailIcon from "../../../assets/images/email-icon.png";
 import userIcon from "../../../assets/images/user-icon.png";
-import "./HeaderBar.css";
+import { Drawer } from 'antd';
+import classes from "./HeaderBar.module.css";
 import history from "../../../history";
+import NeedAssistance from "../../NeedAssistance/NeedAssistance";
+import {connect} from "react-redux"
 
-// import {Link} from "react-router-dom";
 
-class Header extends Component {
-  render() {
-    return (
-      <div className="header-backgroud">
-        <p onClick={() => history.push("/NeedAssistance")}>NeedAssistance
-        </p>
-        {/*<a href="/NeedAssistance" target="_blank">NeedAssistance</a>*/}
-        <select name="" id="">
-          <option value="A1029087 - John Carson Ec…">
-            A1029087 - John Carson Ec…
-          </option>
-          <option value="A1029087 - John Carson Ec…">
-            A1029087 - John Carson Ec…
-          </option>
-          <option value="A1029087 - John Carson Ec…">
-            A1029087 - John Carson Ec…
-          </option>
-        </select>
-        <img src={emailIcon} alt="msg-img"></img>
-        <img src={userIcon} alt="contact-img"></img>
+const Header =(props)=>(
+      <div className={classes.headerbarBackgroud}>
+        <div className={[classes.headerItem, "MaxWidth"].join(" ")}>
+          <ul>
+            <li>
+              {/*<p onClick={props.handleDrawer}>
+                Need Assistance?
+</p>*/}
+<p onClick={() => history.push("/NeedAssistance")}>NeedAssistance?
+</p>
+            </li>
+            <li>
+              <select name="" id="">
+                <option value="A1029087 - John Carson">
+                A1029087 - John Carson
+                </option>
+                <option value="A1026787 - John">
+                A1026787 - John
+                </option>
+                <option value="A1034087 - Carson">
+                A1034087 - Carson
+                </option>
+              </select>
+            </li>
+            <li>
+              <img src={emailIcon} alt="msg-img"></img>
+            </li>
+            <li>
+              <img src={userIcon} alt="contact-img"></img>
+            </li>
+          </ul>
+
+          <Drawer onClose={props.handleDrawer} visible={props.drawer}>
+          <NeedAssistance/>
+          </Drawer>
+        </div>
       </div>
     );
-  }
-}
 
-export default Header;
+    const mapStateToProps=state=>{
+      return{
+        drawer:state.drawer,
+      };
+    }
+
+    const mapDispatchToProps=dispatch=>{
+      return{
+        handleDrawer:()=>dispatch({type:'Drawer'}),
+      }
+    }
+
+export default connect(mapStateToProps,mapDispatchToProps)(Header);

@@ -2,17 +2,8 @@
 import React, {Component} from "react";
 // import style from "styled-components";
 import "./FundName.css"
+import { connect } from 'react-redux';
 
-// const FundNameTag=style.section`
-// padding-bottom: 40px;
-// `;
-
-// const FundName=style.p`
-// color: #022737;
-//     font-size: 16px;
-//   font-weight: bold;
-//   line-height: 1.5;
-// `;
 
 class fundInfo extends Component{
     state = {
@@ -25,11 +16,7 @@ class fundInfo extends Component{
           isEditMode: !this.state.isEditMode,
         });
       };
-    
-      onSubmit = (fields) => {
-        this.setState({ fields: fields });
-      };
-    
+
       updateComponentValue=()=>{
         this.setState({
           isEditMode:false,
@@ -38,42 +25,59 @@ class fundInfo extends Component{
       }
     
       renderEditView = () => {
-        return <div>
+        return <div className="tickmark">
          <input type="text" defaultValue={this.state.value}
          ref="textInput" />
-        <button onClick={this.updateComponentValue}>OK</button>
+         <img src="https://img.icons8.com/metro/20/000000/checked-2.png" alt="tick-mark" onClick={this.updateComponentValue}/>
         </div>
       };
       
       renderDefaultView = () => {
         return <span onDoubleClick={this.changeEditMode}>{this.state.value}</span>;
       };
-      
-      handleClickOutside=(event)=>{
-        if(window.contains(event.target))
-        {
-          alert("clicked outside");
-        }
-      }
+
+      clickedOkHandler = () => {
+        this.props.updateName();
+        this.setState({
+          isEditMode: !this.state.isEditMode
+        });
+    }
+
+    clickHandler = () => {
+      this.props.cancelChange();
+      this.setState({
+        isEditMode: !this.state.isEditMode
+      });
+  }
     render(){
         return(
             <div className="fundname">
-            {this.state.isEditMode
-                ? this.renderEditView()
-                : this.renderDefaultView()}
-                <button onClick={this.changeEditMode}>Edit</button>    
+            {this.state.isEditMode ?
+              <> <input value={this.props.whileUpdating} onChange={this.props.changeName} />
+              <img src="https://img.icons8.com/metro/20/000000/checked-2.png" alt="pencil-icon" onClick={this.clickedOkHandler}/></>
+              : <span>{this.props.fundName}</span>
+          }
+          {this.state.isEditMode ? 
+            null
+              : <img src="https://img.icons8.com/pastel-glyph/20/000000/edit.png" alt="pencil-icon" onClick={this.clickHandler}/>}
             </div>
         )
     }
 }
 
-// const fundInfo=(props)=>{
-//     return(
-//     <FundNameTag>
-//         <FundName>{props.data}</FundName>
-//         <button>Edit</button>
-//     </FundNameTag>
-//     )
-// }
+const mapStateToProps = state => {
+  return {
+      fundName: state.fundName,
+      whileUpdating: state.whileUpdating
+  };
+}
 
-export default fundInfo;
+const mapDispatchToProps = dispatch => {
+  return {
+      changeName: (e) => dispatch({ type: 'Change-Name', updatedName: e.target.value }),
+      updateName: () => dispatch({ type: 'Update-Name' }),
+      cancelChange: () => dispatch({ type: 'Cancel-Change' })
+  };
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(fundInfo);

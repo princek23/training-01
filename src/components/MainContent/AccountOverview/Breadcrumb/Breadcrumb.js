@@ -7,7 +7,6 @@ margin-top: 37px;
     color: #505050;
     font-size: 14px;
     line-height: 1.43;
-    margin-left: 40px;
 
      @media (max-width:1024px){
          .Breadcrumb{

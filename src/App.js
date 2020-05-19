@@ -1,18 +1,23 @@
 import React from "react";
 import Header from "./components/Header/Header";
-import "./App.css";
 import Routes from "./Routes";
+import 'antd/dist/antd.css'
+// import 'bootstrap/dist/css/bootstrap.min.css';
+import './App.css';
+import './reset.css';
 import {} from 'redux';
 import {connect} from 'react-redux';
+import { BrowserRouter } from "react-router-dom";
 
 
 function App(props) {
   console.log(props)
   return (
-    <React.Fragment>
+    <BrowserRouter>
       <Header />
       <Routes />
-    </React.Fragment>
+      </BrowserRouter>
+    
     // <React.Fragment>
     //   <div>
     //   <h1>My name is {props.myname}</h1>

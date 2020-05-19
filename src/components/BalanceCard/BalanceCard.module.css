@@ -12,25 +12,33 @@
     font-size: 24px;
     line-height: 1.25;
   letter-spacing: 0.5px;
-  
-
 }
+
+.BalanceCard p:first-child::after{
+  margin-left: 10px;
+  content: url(../../assets//images//info-icon.png);
+}
+
 .BalanceCard p:nth-child(2){
-    
-     font-size: 42px;
+  
+  font-size: 42px;
   font-weight: 300;
   color:  #a8b400;
-   padding-bottom: 28px;
+  padding-bottom: 28px;
 
 }
 .BalanceCard p:nth-child(3){
-    color: #006778;
-    font-size: 16px;
+  color: #006778;
+  font-size: 16px;
   font-weight: bold;
- letter-spacing: 0.5px;
+  letter-spacing: 0.5px;
+}
+.BalanceCard p:nth-child(3)::after{
+  content: url(../../assets//images/arrow-teal-r.png);
+  margin-left: 10px;
 }
 
-/* .tooltip {
+.tooltip {
   position: relative;
   display: inline-block;
 }
@@ -50,5 +58,5 @@
   box-shadow: 5px 0 10px 0 rgba(0, 0, 0, 0.1);
   padding: 20px 0 0 33px;
   font-size: 14px;
-} */
+} 
 

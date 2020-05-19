@@ -105,7 +105,7 @@ width:90%;
     opacity:0.9;
 }
 & p:last-of-type{
-     font-family: HelveticaNeue;
+  font-family: HelveticaNeue;
     margin:10px 5px;
  font-size: 16px;
   font-weight: bold;

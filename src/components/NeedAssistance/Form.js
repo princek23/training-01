@@ -44,16 +44,12 @@ class Form extends Component {
   render() {
     return (
       <div className="formStyle">
-        <form onSubmit={this.handlesubmit}>
-          <label>Full Name</label>
-          <input
-            type="text"
-            name="fullname"
-            value={this.state.fullname}
-            onChange={this.handlechangevalue}
+        <Form onSubmit={this.handlesubmit}>
+          <label>Full Name<strong>*</strong></label>
+          <input type="text" name="fullname" value={this.state.fullname} onChange={this.handlechangevalue}
           />
 
-          <label>Email Address</label>
+          <label>Email Address<strong>*</strong></label>
           <input
             type="email"
             name="emailaddress"
@@ -61,14 +57,14 @@ class Form extends Component {
             onChange={this.handlechangevalue}
           />
 
-          <label>Query</label>
+          <label>Query<strong>*</strong></label>
           <textarea
             name="query"
             value={this.state.query}
             onChange={this.handlechangevalue}
           />
           <input type="submit" value="SEND" />
-        </form>
+        </Form>
       </div>
     );
   }
