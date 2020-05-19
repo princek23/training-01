@@ -1,11 +1,10 @@
 import React, { Component } from "react";
 import emailIcon from "../../../assets/images/email-icon.png";
 import userIcon from "../../../assets/images/user-icon.png";
-import { Drawer } from 'antd';
 import classes from "./HeaderBar.module.css";
 import history from "../../../history";
 import NeedAssistance from "../../NeedAssistance/NeedAssistance";
-import {connect} from "react-redux"
+// import {connect} from "react-redux"
 
 
 const Header =(props)=>(
@@ -39,24 +38,8 @@ const Header =(props)=>(
               <img src={userIcon} alt="contact-img"></img>
             </li>
           </ul>
-
-          <Drawer onClose={props.handleDrawer} visible={props.drawer}>
-          <NeedAssistance/>
-          </Drawer>
         </div>
       </div>
     );
 
-    const mapStateToProps=state=>{
-      return{
-        drawer:state.drawer,
-      };
-    }
-
-    const mapDispatchToProps=dispatch=>{
-      return{
-        handleDrawer:()=>dispatch({type:'Drawer'}),
-      }
-    }
-
-export default connect(mapStateToProps,mapDispatchToProps)(Header);
+export default Header;
