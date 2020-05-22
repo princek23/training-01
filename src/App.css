@@ -6,18 +6,6 @@
   max-width: 1160px;
   margin: auto;
 }
-@font-face {
-  font-family: HelveticaNeue;
-  src: url(./assets/fonts/HelveticaNeue-Condensed.ttf);
-}
-a {
-  color: white;
-}
-a:hover {
-  color: #bdb9b9;
-  text-decoration: none;
-}
-
 .ant-drawer-content-wrapper{
   width: 50% !important;
 }
@@ -39,7 +27,8 @@ a:hover {
 .carousel-control-next,
 .carousel-control-prev {
   width: 5%;
-}
+ }
+ /*
 .nav-tabs .nav-item {
   color: #505050;
   font-size: 16px;
@@ -60,10 +49,57 @@ a:hover {
 }
 .nav-tabs .nav-link {
   border-radius: 0;
+} */
+
+.ant-tabs-nav {
+  background-color: #f1f1f1;
+}
+.ant-tabs.ant-tabs-card .ant-tabs-card-bar .ant-tabs-tab {
+  border-right: 2px solid #eaeaea;
+  color: #505050;
+  font-size: 16px;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  background-color: #f1f1f1;
+ 
+  border-top: 4px solid rgba(0, 103, 120, 0.1);
+}
+.ant-tabs.ant-tabs-card .ant-tabs-card-bar .ant-tabs-tab-active {
+  color: #006778;
+  border-top: 4px solid #006778;
+  background-color: white;
+}
+
+.ant-table-thead > tr > th{
+  /* background: rgb(241, 235, 235); */
+  font-size: 18px;
+  font-weight: bold;
+  color:#006778;
+  text-align: center;
+}
+
+.ant-table {
+  counter-reset: rowNumber;
+}
+
+.ant-table > tr::before{
+  display: table-cell;
+  counter-increment: rowNumber;
+  content: counter(rowNumber) ".";
+  padding-right: 0.3em;
+}
+.tableStyles{
+  margin:10px
 }
 
 @media (max-width: 320px) {
   header {
     width: 320px;
   }
+}
+
+@media (max-width:768px){ 
+  .ant-drawer-content-wrapper{
+width:100% !important;
+}
 }

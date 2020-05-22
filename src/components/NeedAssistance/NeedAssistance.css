@@ -49,8 +49,6 @@
     margin-left: 0px;
   }
 
-  .NeedAss p:nth-of-type(3) > p > button{
-  }
   hr {
     max-width: 532px;
     margin-left: 50px;
@@ -129,6 +127,10 @@
     /* margin-top: 10px; */
     margin: 10px 942px 40px 50px;
     display: block;
+  }
+
+  .NeedAss strong{
+    color: red;
   }
   
   /* .formStyle input[type="submit"] {
@@ -214,9 +216,3 @@ padding-right:80px;
   display: block;
   padding-bottom: 20px;
 }
-
-/* @media (max-width:900px) {
-  width:100%;
-   } */
-  
-  

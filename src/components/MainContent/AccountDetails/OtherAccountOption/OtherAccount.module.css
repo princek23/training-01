@@ -13,6 +13,10 @@
     /* content: url(../../../../assets/images/arrow-teal-r.png); */
 }
 
+.MainMiddle >button:not(:last-child){
+    margin-right: 10px;
+}
+
 @media (max-width: 1024px) {
     .MainMiddle{
         margin-top: 20px;

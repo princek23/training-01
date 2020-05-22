@@ -1,9 +1,9 @@
-import React, { Component } from "react";
+import React from "react";
 import emailIcon from "../../../assets/images/email-icon.png";
 import userIcon from "../../../assets/images/user-icon.png";
 import classes from "./HeaderBar.module.css";
 import history from "../../../history";
-import NeedAssistance from "../../NeedAssistance/NeedAssistance";
+// import NeedAssistance from "../../NeedAssistance/NeedAssistance";
 // import {connect} from "react-redux"
 
 
@@ -12,9 +12,6 @@ const Header =(props)=>(
         <div className={[classes.headerItem, "MaxWidth"].join(" ")}>
           <ul>
             <li>
-              {/*<p onClick={props.handleDrawer}>
-                Need Assistance?
-</p>*/}
 <p onClick={() => history.push("/NeedAssistance")}>NeedAssistance?
 </p>
             </li>
