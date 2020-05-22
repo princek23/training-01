@@ -5,6 +5,7 @@ import classes from "./HeaderBar.module.css";
 import history from "../../../history";
 // import NeedAssistance from "../../NeedAssistance/NeedAssistance";
 // import {connect} from "react-redux"
+import {Link} from "react-router-dom";
 
 
 const Header =(props)=>(
@@ -12,8 +13,10 @@ const Header =(props)=>(
         <div className={[classes.headerItem, "MaxWidth"].join(" ")}>
           <ul>
             <li>
+            <Link to="/NeedAssistance">
 <p onClick={() => history.push("/NeedAssistance")}>NeedAssistance?
 </p>
+</Link>
             </li>
             <li>
               <select name="" id="">

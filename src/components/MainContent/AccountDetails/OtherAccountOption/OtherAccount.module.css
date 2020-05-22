@@ -7,11 +7,12 @@
     align-self: center;
     content: url(../../../../assets/images/arrow-white-r.png);
 }
-.MainMiddle button:last-child::after{
+/* .MainMiddle button:last-child::after{
     margin-left: 10px;
     align-self: center;
-    /* content: url(../../../../assets/images/arrow-teal-r.png); */
-}
+    content: url(../../../../assets/images/arrow-teal-r.png);
+} */
+
 
 .MainMiddle >button:not(:last-child){
     margin-right: 10px;

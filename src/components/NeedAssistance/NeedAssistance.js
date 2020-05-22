@@ -85,8 +85,8 @@ handlechangevalue = (e) => {
                     </div>
                     <p>You have successfully submmited your request for assistance.
                     We will get back to you within 2 - 3 business days.</p>
-                    <Button invert onClick={() => history.push("/")}>DONE</Button>
-                    <Link to='/report'>View Report</Link>
+                    <Link to="/"><Button>DONE</Button></Link>
+                    <Link to="/report">View Report</Link>
                     <h3>Hit a snag?</h3>
                     <span>Contact us at 888-383-4483</span>
       </div>

@@ -5,10 +5,9 @@ import "antd/dist/antd.css";
 // import 'bootstrap/dist/css/bootstrap.min.css';
 import "./App.css";
 import "./reset.css";
-import {} from "redux";
 import { connect } from "react-redux";
-import { Route, Switch, BrowserRouter } from "react-router-dom";
-import Report from "./components/Report/Report";
+import { BrowserRouter,Route, Switch } from "react-router-dom";
+import Report from "./components/Report/ReportPage";
 import Home from "./components/HomePage/homepage";
 
 function App(props) {
@@ -18,8 +17,8 @@ function App(props) {
   return (
     <BrowserRouter>
       <Switch>
-        <Route path="/report" exact component={Report} />
-        <Route path="/" component={Home} />
+      <Route path="/report" exact component={Report} />
+      <Route path="/" exact component={Home} />
       </Switch>
     </BrowserRouter>
 

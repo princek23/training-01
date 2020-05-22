@@ -167,7 +167,6 @@ const EditableTable = (props) => {
   });
   return (
       <Form form={form} component={false}>
-      <NavWrap>
       <Header/>
     <styledComp.styleH1>List of Report</styledComp.styleH1>
       <Table cellpadding="0"
@@ -198,7 +197,6 @@ const EditableTable = (props) => {
       <Link to="/">
         <styledComp.styleButton>Back</styledComp.styleButton>
       </Link>
-      </NavWrap>
     </Form>
   );
 };
