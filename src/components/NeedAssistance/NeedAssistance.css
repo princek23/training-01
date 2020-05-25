@@ -1,74 +1,77 @@
+.NeedAss{
+  padding:50px;
+padding-right:120px;
+}
 .NeedAss > h3 {
-    font-family: "Berkeley";
     font-size: 36px;
     font-weight: normal;
     line-height: 1.17;
     letter-spacing: 0.5px;
     color: #022737;
-    padding: 50px 367px 15px 50px;
-    margin: 0 !important;
+    font-size:36px;
+    color:#022737
   }
-  
+
   .NeedAss p:first-of-type {
-    font-size: 16px;
+    color:#505050;
+    font-size:16px;
+    padding-top:15px;
     line-height: 1.5;
-    color: #505050;
-    font-family: "HelveticaNeue";
-    padding: 0px 836px 30px 50px;
-    margin: 0 !important;
   }
   
   .NeedAss p:nth-of-type(2) {
-    font-size: 16px;
-    font-weight: bold;
+    color:#022737;
+    font-size:16px;
+    font-weight:bold;
+    padding-top:30px;
     line-height: 1.5;
-    color: #022737;
-    font-family: "HelveticaNeue";
-    padding: 0px 150px 30px 50px;
-    margin: 0;
   }
   
   .NeedAss p:nth-of-type(3) {
-    font-family: "HelveticaNeue";
-    font-size: 16px;
-    line-height: 1.5;
-    color: #505050;
-    padding: 30px 332px 30px 50px;
-    margin: 0;
+    color:#505050;
+ font-size:16px;
   }
   
   .NeedAss p:nth-of-type(3) > span {
-    font-family: "HelveticaNeue";
+    /* font-family: "HelveticaNeue";
     font-size: 16px;
     font-weight: bold;
     line-height: 1.5;
-    color: #022737;
+    color: #022737; */
+    font-weight:bold;
+        color:#022737;
   }
 
-  .NeedAss p:nth-of-type(3) > div > input[type="text"]{
+  /* .NeedAss p:nth-of-type(3) > div > input[type="text"]{
     margin-left: 0px;
-  }
+  } */
 
   hr {
-    max-width: 532px;
-    margin-left: 50px;
+    color:#d4d4d4;
+    margin:30px 0;
   }
   
   .NeedAss p:nth-of-type(4) {
-    font-family: "Berkeley";
+    /* font-family: "Berkeley";
     font-size: 24px;
     line-height: 1.25;
     letter-spacing: 0.5px;
     color: #022737;
-    padding: 50px 0 15px 50px;
+    padding: 50px 0 15px 50px; */
+    color: #022737;
+    font-size: 24px;
+    margin-bottom: 15px;
   }
   
   .NeedAss p:nth-of-type(5) {
-    font-family: "HelveticaNeue";
+    /* font-family: "HelveticaNeue";
     font-size: 16px;
     line-height: 1.5;
     color: #505050;
-    padding: 0 0 50px 50px;
+    padding: 0 0 50px 50px; */
+    color: #505050;
+    display: block;
+    padding-bottom: 20px;
   }
   
   /* .NeedAss button{
@@ -87,21 +90,25 @@
     font-family: "HelveticaNeue";
     margin-left: 0px;
   } */
-
+  
   .NeedAss form  label {
-    font-family: "HelveticaNeue";
+    /* font-family: "HelveticaNeue";
     font-size: 16px;
     line-height: 1.5;
     color: #505050;
-    padding: 0px 0px 0px 50px;
+    padding: 0px 0px 0px 50px; */
+    display: block;
+    padding-top: 40px;
+    color: #505050;
   }
   
   .NeedAss form  {
+    max-width: 80%;
     display: flex;
     flex-direction: column;
   }
   
-  .NeedAss form  input[type="text"] {
+  /* .NeedAss form  input[type="text"] {
     border: solid 1px #d4d4d4;
     background-color: #ffffff;
     padding: 8px 164px 8px 20px;
@@ -113,41 +120,25 @@
     background-color: #ffffff;
     padding: 8px 164px 8px 20px;
     margin: 10px 942px 40px 50px;
+  } */
+
+  .NeedAss form input{
+    width: 300px;
+    height: 40px;
+    padding:5px 10px;
+    border: 1px solid darkgray;
   }
   
   .NeedAss form  textarea {
-    width: 500px;
-    height: 150px;
-    border: solid 1px #d4d4d4;
-    background-color: #ffffff;
-    padding: 10px 74px 0px 20px;
-    font-size: 16px;
-    line-height: 1;
-    margin-left: 51px;
-    /* margin-top: 10px; */
-    margin: 10px 942px 40px 50px;
-    display: block;
+    padding: 10px 20px;
   }
 
   .NeedAss strong{
     color: red;
   }
-  
-  /* .formStyle input[type="submit"] {
-    padding: 15px 80px 14px 80px;
-    margin: 50px 1100px 0 50px;
-    color: white;
-    background-color: #006778;
-    font-size: 18px;
-    font-weight: bold;
-    font-stretch: condensed;
-    letter-spacing: 0.5px;
-    color: #ffffff;
-    font-family: "HelveticaNeue-CondensedBold", "Helvetica Neue";
-  } */
 
   .NeedAss form Button{
-  background-color: #006778;
+  /* background-color: #006778;
     font-size: 18px;
     font-weight: bold;
     color: #fff;
@@ -155,12 +146,21 @@
     margin-left: 50px;
     width: 200px;
     height: 50px;
+    display: block; */
+    background-color: #006778;
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+    letter-spacing: 0.5px;
+    margin: 50px 0;
+    width: 200px;
+    height: 50px;
     display: block;
   }
 
   .formSubmit{
-padding:50px;
-padding-right:80px;
+    padding:50px;
+    padding-right:80px;
   }
 
   .formSubmit  h2{
@@ -192,15 +192,13 @@ padding-right:80px;
 }
 
 .formSubmit button{
-  /* background-color: #006778; */
   font-size: 18px;
-  font-weight: bold;
-  /* color: #fff; */
   letter-spacing: 0.5px;
   border:1px solid #006778;
   margin: 50px 0;
-  width: 200px;
-  height: 50px;
+  padding: 10px 20px;
+  /* width: 200px;
+  height: 50px; */
   display: block;
   cursor: pointer;
 }

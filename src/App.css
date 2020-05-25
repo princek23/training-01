@@ -6,12 +6,6 @@
   max-width: 1160px;
   margin: auto;
 }
-.ant-drawer-content-wrapper{
-  width: 50% !important;
-}
-.ant-drawer-body{
-  padding: 0;
-}
 .nav {
   flex-wrap: nowrap;
 }
@@ -50,6 +44,13 @@
 .nav-tabs .nav-link {
   border-radius: 0;
 } */
+
+.ant-drawer-content-wrapper{
+  width: 50% !important;
+}
+.ant-drawer-body{
+  padding: 0;
+}
 
 .ant-tabs-nav {
   background-color: #f1f1f1;
@@ -96,10 +97,4 @@
   header {
     width: 320px;
   }
-}
-
-@media (max-width:768px){ 
-  .ant-drawer-content-wrapper{
-width:100% !important;
-}
 }

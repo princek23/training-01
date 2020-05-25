@@ -3,7 +3,7 @@ import React, { Component } from "react";
 import Button from "../Button/Button";
 import { connect } from 'react-redux';
 import "./NeedAssistance.css";
-import history from "../../history";
+// import history from "../../history";
 import {Link} from 'react-router-dom'
 
 class NeedAssistance extends Component {
@@ -85,8 +85,8 @@ handlechangevalue = (e) => {
                     </div>
                     <p>You have successfully submmited your request for assistance.
                     We will get back to you within 2 - 3 business days.</p>
-                    <Link to="/"><Button>DONE</Button></Link>
-                    <Link to="/report">View Report</Link>
+                    <Button invert onClick={this.props.drawerHandler}>DONE</Button>
+                    <Link to="/report">View Reports</Link>
                     <h3>Hit a snag?</h3>
                     <span>Contact us at 888-383-4483</span>
       </div>
@@ -103,7 +103,7 @@ const mapStateToProps = state => {
 }
 const mapDispatchToProps = dispatch => {
   return {
-    // drawerHandler: () => dispatch({ type: 'Drawer' }),
+    drawerHandler: () => dispatch({ type: 'Drawer' }),
       submitData: (addData) => dispatch({ type: 'Submit', addData: addData }),
   };
 }

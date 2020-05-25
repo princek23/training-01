@@ -67,11 +67,18 @@
    align-self: center;
 }
 
-.headerItem select{
+/* .headerItem select{
   border-radius: 10.5px;
   width: 246px;
   color: #022737;
+} */
+
+.headerItem select{
+  color:black;
+  border-radius: 10.5px;
+  width: 246px;
 }
+
 
 .headerItem ul li p{
   cursor: pointer;

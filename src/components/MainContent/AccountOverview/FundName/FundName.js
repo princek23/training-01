@@ -74,8 +74,8 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
   return {
-      changeName: (e) => dispatch({ type: 'Change-Name', updatedName: e.target.value }),
-      updateName: () => dispatch({ type: 'Update-Name' }),
+      changeName: (e) => dispatch({ type: 'Change-FundName', updatedName: e.target.value }),
+      updateName: () => dispatch({ type: 'Update-FundName' }),
       cancelChange: () => dispatch({ type: 'Cancel-Change' })
   };
 }

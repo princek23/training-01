@@ -19,22 +19,36 @@
 
 const initialState = {
     data: [],
+    drawer: false,
     fundName: 'The Church Fund - A1050919',
     whileUpdating: '',
     index: 0,
     keyValue: 0,
+    fundsList: [
+        { id: 0, name: 'The Church Fund - A1050919' },
+        { id: 1, name: 'The Moonraft Fund - A1029087' },
+        { id: 2, name: 'The UST Global Fund - A1026787' },
+    ],
 };
 
 const reducer = (state = initialState, action) => {
     switch (action.type) {
-        case 'Change-Name':
+        case 'Drawer':
+            return {
+                ...state,
+                drawer: !state.drawer
+            };
+        case 'Change-FundName':
             return {
                 ...state,
                 whileUpdating: action.updatedName
             };
-        case 'Update-Name':
+        case 'Update-FundName':
+            let updateFundsList = [...state.fundsList];
+            updateFundsList[state.index].name = state.whileUpdating;
             return {
                 ...state,
+                fundsList: [...updateFundsList],
                 fundName: state.whileUpdating
             };
         case 'Cancel-Change':
@@ -42,7 +56,13 @@ const reducer = (state = initialState, action) => {
                 ...state,
                 whileUpdating: state.fundName
             };
-        case 'Get-Data':
+            case 'Selection-Changed':
+                return {
+                    ...state,
+                    fundName: state.fundsList[action.id].name,
+                    index: action.id
+                };
+        case 'Get-ReportData':
             let getData = localStorage.getItem("DATA");
             let dataList = [];
             if (getData) {
@@ -53,7 +73,7 @@ const reducer = (state = initialState, action) => {
                 data: [...dataList],
                 keyValue: dataList.length
             };
-        case 'Delete-Data':
+        case 'Delete-ReportData':
             const updateList = [...state.data];
             const newData = updateList.filter(item => item.key !== action.key);
             localStorage.setItem("DATA", JSON.stringify(newData));
@@ -62,7 +82,7 @@ const reducer = (state = initialState, action) => {
                 ...state,
                 data: newData
             };
-        case 'Update-Data':
+        case 'Update-ReportData':
 
             const nwData = [...action.newData];
             localStorage.setItem("DATA", JSON.stringify(nwData));

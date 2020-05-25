@@ -1,10 +1,9 @@
-import React, {useState,useEffect} from "react";
-import { Table, Input, InputNumber, Popconfirm, Form, Space } from 'antd';
+import React, { useState, useEffect } from "react";
+import { Table, Input, InputNumber, Popconfirm, Form, Space } from "antd";
 import { useSelector } from "react-redux";
-import { Link } from 'react-router-dom';
-import { connect } from 'react-redux';
+import { Link } from "react-router-dom";
+import { connect } from "react-redux";
 import * as styledComp from "./reportStyle";
-import {NavWrap} from "../HomePage/homepageStyle";
 import Header from "../Header/Header";
 
 const EditableCell = ({
@@ -72,9 +71,9 @@ const EditableTable = (props) => {
     setEditingKey("");
   };
 
-  const save = async (key) => {
+  const save = (key) => {
     try {
-      const row = await form.validateFields();
+      const row = form.validateFields();
       const newData = [...data];
       const index = newData.findIndex((item) => key === item.key);
 
@@ -166,10 +165,11 @@ const EditableTable = (props) => {
     };
   });
   return (
-      <Form form={form} component={false}>
-      <Header/>
-    <styledComp.styleH1>List of Report</styledComp.styleH1>
-      <Table cellpadding="0"
+    <Form form={form} component={false}>
+      <Header />
+      <styledComp.styleH1>List of Report</styledComp.styleH1>
+      <Table
+        cellpadding="0"
         components={{
           body: {
             cell: EditableCell,
@@ -190,9 +190,7 @@ const EditableTable = (props) => {
             localStorage.clear();
             window.location.reload();
           }}
-        >
-          <styledComp.styleButton>Delete All</styledComp.styleButton>
-        </Popconfirm>
+        ></Popconfirm>
       ) : null}
       <Link to="/">
         <styledComp.styleButton>Back</styledComp.styleButton>
@@ -208,8 +206,8 @@ const mapStateToProps = (state) => {
 };
 const mapDispatchToProps = (dispatch) => {
   return {
-    deleteData: (key) => dispatch({ type: "Delete-Data", key: key }),
-    updateData: (nwData) => dispatch({ type: "Update-Data", newData: nwData }),
+    deleteData: (key) => dispatch({ type: "Delete-ReportData", key: key }),
+    updateData: (nwData) => dispatch({ type: "Update-ReportData", newData: nwData }),
   };
 };
 

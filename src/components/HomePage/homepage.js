@@ -1,11 +1,10 @@
 import React, { Component } from "react";
 import Header from "../Header/Header";
-import Routes from "../../Routes";
+// import Routes from "../../Routes";
 // import {connect} from 'react-redux';
 import { BrowserRouter } from "react-router-dom";
-import Account from "../../Account";
-
-
+import AccountOverview from "../MainContent/AccountOverview/AccountOverview";
+import AccountDetails from "../MainContent/AccountDetails/AccountDetails";
 
 export default class homepage extends Component {
   render() {
@@ -13,7 +12,8 @@ export default class homepage extends Component {
       <div>
         <BrowserRouter>
           <Header />
-          <Routes/>
+          <AccountOverview />
+          <AccountDetails />
         </BrowserRouter>
       </div>
     );

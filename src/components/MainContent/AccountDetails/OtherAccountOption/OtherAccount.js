@@ -11,7 +11,7 @@ const mainMiddle = () => (
     <div className={[classes.MainMiddle, 'MaxWidth'].join(' ')}>
         {buttonData.map((data, id) => <Button key={data}> {data}</Button>)}
 
-        <Button><Link to='/report'>MANAGE ACCOUNT &nbsp;&nbsp;</Link></Button>
+        <Button><Link to='/report' >MANAGE ACCOUNT &nbsp;&nbsp;</Link></Button>
     </div>
 );
 
